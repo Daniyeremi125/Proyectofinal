@@ -13,7 +13,7 @@
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link " href="./examples/maps.html">
+      <a class="nav-link " href="/empleados">
         <i class="fab fa-creative-commons-by text-orange"></i> Empleados
       </a>
     </li>

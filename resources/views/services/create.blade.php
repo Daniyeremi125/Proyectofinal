@@ -26,10 +26,11 @@
     @endforeach
 @endif
 
-            <form action="">
+            <form action="{{ URL('/servicios')}}" method="POST">
+                @csrf   
                 <div class="from-group">
                     <label for="name">Nombre del servicio</label>
-                    <input type="text" name="name" class="form-control" value=" {{old('name')}} " required>
+                    <input type="text" name="name" class="form-control" value=" {{old('name')}} " >
                 </div>
 
                 <div class="from-group">

@@ -35,8 +35,8 @@ class ServicesController extends Controller
         $this->validate($request,$rules,$messages);
 
         $services= new Services();
-        $services->name= $request->imput('description');
-        $services->description= $request->imput('name');
+        $services->name= $request->input('name');
+        $services->description= $request->input('description');
         $services->save();
         $notification ='El servicio se ha creado';
 
@@ -46,7 +46,7 @@ class ServicesController extends Controller
     public function edit(services $services){
         return view('services.edit',compact('services'));
     }
-    public function uppdate(Request $request, Services $services){
+    public function update(Request $request, Services $services){
     $rules =[
         'name' =>'required|min:3'
     ];
@@ -57,8 +57,8 @@ class ServicesController extends Controller
 
     $this->validate($request,$rules,$messages);
 
-    $services->name= $request->imput('description');
-    $services->description= $request->imput('name');
+    $services->name= $request->imput('name');
+    $services->description= $request->imput('description');
     $services->save();
 
     $notification ='EL servicio se ha actualizado';

@@ -36,7 +36,7 @@
 
                 <div class="from-group">
                     <label for="description">Descripcion</label>
-                    <input type="text" name="description" class="form-control" value=" {{old('description'$services->description)}} ">
+                    <input type="text" name="description" class="form-control" value=" {{old('description'$services->description)}}" >
                 </div>
                 <button type="submit" class="btn btn-sm btn-primary">Guardar servicio</button>
             </form>

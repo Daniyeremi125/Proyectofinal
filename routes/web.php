@@ -20,3 +20,6 @@ Route::post('/servicios', [App\Http\Controllers\ServicesController::class, 'send
 
 Route::put('/servicios/{services}', [App\Http\Controllers\ServicesController::class, 'update']);
 Route::delete('/servicios/{services}', [App\Http\Controllers\ServicesController::class, 'destroy']);
+
+// rutas de servicios Empleados
+Route::resource('empleados', 'App\Http\Controllers\admin\EmployeesController');
