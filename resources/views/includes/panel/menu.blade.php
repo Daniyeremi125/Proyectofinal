@@ -1,3 +1,6 @@
+
+<h6 class="navbar-heading tex-muted">Gestion</h6>
+
 <ul class="navbar-nav">
     <li class="nav-item  active ">
       <a class="nav-link  active " href="./index.html">
