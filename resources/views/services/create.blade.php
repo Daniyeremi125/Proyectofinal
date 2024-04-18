@@ -1,4 +1,4 @@
-@extends('layouts.panel')
+@extends('layouts.form')
 
 @section('content')
 
@@ -29,12 +29,12 @@
             <form action="">
                 <div class="from-group">
                     <label for="name">Nombre del servicio</label>
-                    <input type="text" name="name" class="form-control" value=" {{old(name)}} " required>
+                    <input type="text" name="name" class="form-control" value=" {{old('name')}} " required>
                 </div>
 
                 <div class="from-group">
                     <label for="description">Descripcion</label>
-                    <input type="text" name="description" class="form-control" value=" {{old(description)}} ">
+                    <input type="text" name="description" class="form-control" value=" {{old('description')}} ">
                 </div>
                 <button type="submit" class="btn btn-sm btn-primary">Crear servicio</button>
             </form>
