@@ -17,3 +17,6 @@ Route::get('/servicios', [App\Http\Controllers\ServicesController::class, 'index
 Route::get('/servicios/create', [App\Http\Controllers\ServicesController::class, 'create']);
 Route::get('/servicios/¨{services}/edit', [App\Http\Controllers\ServicesController::class, 'edit']);
 Route::post('/servicios', [App\Http\Controllers\ServicesController::class, 'sendData']);
+
+Route::put('/servicios/{services}', [App\Http\Controllers\ServicesController::class, 'update']);
+Route::delete('/servicios/{services}', [App\Http\Controllers\ServicesController::class, 'destroy']);

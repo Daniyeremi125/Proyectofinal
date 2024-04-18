@@ -1,4 +1,4 @@
-@extends('layouts.panel')
+@extends('layouts.form')
 
 @section('content')
 
@@ -12,6 +12,13 @@
                             <a href="{{ url('/servicios/create') }}" class="btn btn-sm btn-primary">Nuevo servicio</a>
                         </div>
                     </div>
+                </div>
+                <div class="card-body">
+                    @if(session('notification'))
+                    <div class="alert alert-success" role="alert">
+                        {{ session('notification')}}
+                    </div>
+                    @endif
                 </div>
                 <div class="table-responsive">
                     <!-- Projects table -->
@@ -35,8 +42,14 @@
                                    {{ $servicios->description }}
                                 </td>
                                 <td>
-                                    <a href="" class="btn btn-sm btn-primary">Editar</a>
-                                    <a href="" class="btn btn-sm btn-danger">Elinar</a>
+                                  
+                                    <form action="{{url('/servicios/'.$servicios->id)}}" method="POST">
+                                        @csrf
+                                        @method('DELETE')
+                                        <a href="{{ url('/servicios/'.$servicios->id.'/edit') }}" class="btn btn-sm btn-primary">Editar</a>
+                                        <button type="submit" class="btn btn-sm btn-danger">Elinar</button>
+                                    </form>
+                                  
                                 </td>
                               
                             </tr>
