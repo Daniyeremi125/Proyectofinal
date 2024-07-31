@@ -25,8 +25,8 @@
                     <table class="table align-items-center table-flush">
                         <thead class="thead-light">
                             <tr>
-                                <th scope="col">Nombre del servicios</th>
-                                <th scope="col">Descripcion del servicio</th>
+                                <th scope="col">Nombre de la Tarea</th>
+                                <th scope="col">Descripcion de la Tarea</th>
                                 <th scope="col">Opciones</th>
                           
                             </tr>
@@ -46,8 +46,8 @@
                                     <form action="{{url('/servicios/'.$servicios->id)}}" method="POST">
                                         @csrf
                                         @method('DELETE')
-                                        <a href="{{ url('/servicios/'.$servicios->id.'/edit') }}" class="btn btn-sm btn-primary">Editar</a>
-                                        <button type="submit" class="btn btn-sm btn-danger">Elimar</button>
+                                        <a href="{{ url('/servicios/'.$servicios->id.'/edit') }}" class="btn btn-sm btn-primary">Editar Tarea</a>
+                                        <button type="submit" class="btn btn-sm btn-danger">Elimar Tarea</button>
                                     </form>
                                   
                                 </td>

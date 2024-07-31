@@ -6,7 +6,7 @@
                 <div class="card-header border-0">
                     <div class="row align-items-center">
                         <div class="col">
-                            <h3 class="mb-0">EDITAR SERVICIOS</h3>
+                            <h3 class="mb-0">EDITAR TAREAS</h3>
                         </div>
                         <div class="col text-right">
                             <a href="{{ url('/servicios') }}" class="btn btn-sm btn-succsess">Regresar</a>
@@ -30,7 +30,7 @@
                 @csrf
                 @method ('PUT')
                 <div class="from-group">
-                    <label for="name">Nombre del servicio</label>
+                    <label for="name">Nombre de la Tarea</label>
                     <input type="text" name="name" class="form-control" value=" {{old('name', $services->name)}} " required>
                 </div>
 
@@ -38,7 +38,7 @@
                     <label for="description">Descripcion</label>
                     <input type="text" name="description" class="form-control" value=" {{old('description'$services->description)}}" >
                 </div>
-                <button type="submit" class="btn btn-sm btn-primary">Guardar servicio</button>
+                <button type="submit" class="btn btn-sm btn-primary">Guardar Tareas</button>
             </form>
         </div>
 
